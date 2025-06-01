@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Great Vibes', cursive;
+}
+
+.envelope {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e63946;
+    flex-direction: column;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo {
+    font-size: 5em;
+    color: white;
+    text-align: center;
+}
+
+.coracao {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulsar 1s infinite;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #e63946;
+    text-transform: uppercase;
+}
+
+.coracao::before,
+.coracao::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.coracao::before {
+    top: -50px;
+    left: 0;
+}
+
+.coracao::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+.aparecer{
+    animation: aparecer 1s;
+}
+
+.sumir{
+    animation: sumir 1s;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sumir {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#paginas {
+    width: 100%;
+    height: 100vh; /* ocupa toda a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina {
+    width: 90%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sessao {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo para a imagem */
+.sessao.esquerda img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para o texto */
+.sessao.direita p {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.polaroide {
+    background: white;
+    padding: 10px 10px 40px 10px; /* mais espaço na parte de baixo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    height: 70%;
+    width: 100%;
+}
+
+.polaroide img {
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+.polaroide .legenda {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: black;
+    font-family: 'Great Vibes', cursive;
+}
