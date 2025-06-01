@@ -79,11 +79,11 @@
     }
 }
 
-.aparecer{
+.aparecer {
     animation: aparecer 1s;
 }
 
-.sumir{
+.sumir {
     animation: sumir 1s;
 }
 
@@ -109,7 +109,7 @@
 
 #paginas {
     width: 100%;
-    height: 100vh; /* ocupa toda a altura da tela */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,20 +126,18 @@
 
 .sessao {
     width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
-/* Estilo para a imagem */
 .sessao.esquerda img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
 }
 
-/* Estilo para o texto */
 .sessao.direita p {
     text-align: center;
     color: white;
@@ -148,8 +146,8 @@
 
 .polaroide {
     background: white;
-    padding: 10px 10px 40px 10px; /* mais espaço na parte de baixo */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    padding: 10px 10px 40px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     display: inline-block;
     text-align: center;
@@ -168,4 +166,96 @@
     font-size: 0.9em;
     color: black;
     font-family: 'Great Vibes', cursive;
+}
+
+/* Estilos para a mensagem final */
+.mensagem-final {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.mensagem-final h1 {
+    font-size: 2.2em;
+    color: #c0392b;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-final .conteudo-carta {
+    max-width: 85%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    font-size: 0.9em;
+    color: #333;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.mensagem-final .conteudo-carta p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.mensagem-final .assinatura {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.coracao-flutuante {
+    position: fixed;
+    color: #ff6b6b;
+    font-size: 1.2em;
+    animation: flutuar 3s ease-in-out infinite;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .mensagem-final h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .mensagem-final .conteudo-carta {
+        padding: 15px;
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    .mensagem-final .conteudo-carta p {
+        margin-bottom: 12px;
+    }
+
+    .mensagem-final .assinatura {
+        font-size: 1em;
+        margin-top: 15px;
+    }
 }
